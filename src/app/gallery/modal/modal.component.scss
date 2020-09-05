@@ -1,0 +1,70 @@
+@import '../../../assets/scss/variables.scss';
+
+.modal {
+    background-color: $bgColorOpacity2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.modalWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 550px;
+    min-height: 315px;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.imgColumn {
+    background-color: $bgColor6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 200px;
+    position: relative;
+    &:after {
+        content: '';
+        background-color: $bgColorOpacity1;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+.modalContent {
+    background-color: $bgColor1;
+    border-radius: 4px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modalHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .title {
+        font-weight: 700;
+        margin-right: 15px;
+    }
+    .close {
+        cursor: pointer;
+        padding: 0 3px;
+    }
+}
+.modalBody .count {
+    color: $fontColor2;
+    font-size: 12px;
+}
+

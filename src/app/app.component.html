@@ -1,0 +1,26 @@
+<div class="body">
+    <!-- header -->
+    <header>
+        <div class="container">
+            <ul class="navbar">
+                <li><button routerLink="/gallery" routerLinkActive="active">Gallery</button></li>
+                <li><button routerLink="/favorite" routerLinkActive="active">Favorite</button></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- routing content -->
+    <main>
+        <div class="container">
+            <h1 *ngIf="!currentUrl">Welcome to Images Search Application</h1>
+            
+            <!-- Angular routing control -->
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        <div class="container">Interview Task Angular Developer</div>
+    </footer>
+</div>

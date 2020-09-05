@@ -1,0 +1,20 @@
+<div class="favoriteList">
+    <h3 class="noResult" *ngIf="(lists$ | async).length === 0">There is no any result</h3>
+    <div class="item" *ngFor="let list of lists$ | async; let i = index">
+        <article>
+            <h2 class="title" contenteditable="true" (blur)="onNameChange($event, list)">{{list.name}}</h2>
+            <p class="paragraph" contenteditable="true" (blur)="onDescriptionChange($event, list)">{{list.description}}</p>
+        </article>
+        <div class="row">
+            <ng-container *ngFor="let img of images$ | async">
+                <div class="column col-3" *ngIf="img.listId === list.id">
+                    <a class="box" (click)="onDownloadImg(img.imageUrl, img.name)">
+                        <figure>
+                            <img [src]="img.imageUrl" [alt]="img.altDescr">
+                        </figure>
+                    </a>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

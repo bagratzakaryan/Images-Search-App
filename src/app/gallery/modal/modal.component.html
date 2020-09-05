@@ -1,0 +1,14 @@
+<div class="modal">
+    <div class="modalWrapper">
+        <div class="imgColumn" *ngIf="imgUrl" [style.background-image]="'url(' + this.imgUrl + ')'"></div>
+        <div class="modalContent">
+            <div class="modalHeader">
+                <h3 class="title">{{title}}</h3>
+                <span class="close" (click)="closeModal()">&#10006;</span>
+            </div>
+            <div class="modalBody">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+@import '../assets/scss/variables.scss';
+
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header {
+    background-color: $bgColor3;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+.navbar {
+    display: flex;
+    li + li {
+        margin-left: 15px;
+    }
+    .active {
+        color: $fontColor3;
+    }
+}
+main {
+    margin-bottom: 30px;
+}
+footer {
+    color: $fontColor1;
+    background-color: $bgColor2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: auto;
+}

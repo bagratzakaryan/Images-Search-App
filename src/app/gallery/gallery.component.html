@@ -1,0 +1,56 @@
+<div class="formGroup">
+    <label class="label" for="search">Search images</label>
+    <input class="formControl" id="search" type="text" #search>
+</div>
+
+<div class="galleryList">
+    <h3 class="noResult" *ngIf="(gallery$ | async).length === 0">There is no any result</h3>
+    <div class="row">
+        <div class="column col-3" *ngFor="let img of gallery$ | async; let i = index">
+            <div class="box">
+                <figure>
+                    <img [src]="img.imageUrl" [alt]="img.altDescr">
+                </figure>
+                <div class="actions">
+                    <a class="action" href="{{img.authorUrl}}">{{img.name}}</a>
+                    <button class="action" (click)="onOpenSaveToFavorite(img)">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-modal *ngIf="!isFavoriteListHidden"
+           [title]="'Choose the list to add the image'"
+           [imgUrl]="selectedImage?.imageUrl"
+           (onclose)="isFavoriteListHidden = $event">
+
+    <!-- ng-content -->
+    <ul class="createList">
+        <li (click)="onOpenCreatedList()">Create a new list +</li>
+        <li *ngFor="let item of lists$ | async" (click)="onSaveToFavorite(item)">
+            <div class="wrapper">
+                <h4 class="title">{{item.name}}</h4>
+                <span class="count">{{getListImagesCount(item.id)}} Photo</span>
+            </div>
+            <span class="add">+/-</span>
+        </li>
+    </ul>
+</app-modal>
+<app-modal *ngIf="!isCreateListHidden"
+           [title]="'Create a new list'"
+           (onclose)="isCreateListHidden = $event">
+
+    <!-- ng-content -->
+    <form (ngSubmit)="onCreateList()" #createListForm="ngForm">
+        <div class="formGroup">
+            <label class="label" for="name">Name</label>
+            <input class="formControl" type="text" id="name" name="name" minlength="4" required [(ngModel)]="formData.name">
+        </div>
+        <div class="formGroup">
+            <label class="label" for="descr">Description</label>
+            <textarea class="formControl" id="descr" name="descr" minlength="8" required [(ngModel)]="formData.description"></textarea>
+        </div>
+        <button type="submit" class="btn" [disabled]="!createListForm.form.valid">Submit</button>
+    </form>
+</app-modal>
