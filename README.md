@@ -3,33 +3,46 @@
 Images Search App is an application which allows users to search and filter some Images by one field and to add/delete them into the favorite lists, and create a new favorite list.
 
 # Author
+
 Bagrat Zakaryan
+
 Software Engineer
+
 bagratzakaryan@gmail.com
 
 # Angular
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
-## Development server
+# Requirements
+To download and start the application you need to have the following software installed on your work machine.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Git - [Official website](https://git-scm.com/)
 
-## Code scaffolding
+2. Angular CLI - [Official website](https://cli.angular.io/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. NPM - [Official website](https://www.npmjs.com/)
 
-## Build
+4. NodeJS - [Official website](https://nodejs.org/en/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+5. Google Chrome - [Official website](https://www.google.com/chrome/) (optional)
 
-## Running unit tests
+# Installation and start
+Copy these commands to your terminal or cmd to install and start the application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`$ git clone https://github.com/bagratzakaryan/Images-Search-App/`
 
-## Running end-to-end tests
+`cd Images-Search-App`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+`npm install`
 
-## Further help
+`npm start`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Usage
+
+# Filter images and see Author
+# Create and Add images into favorite list
+
+Go to the gallery page by clicking in the navbar to Gallery, then search(filter) your favorite images, hover your liked image and click to Save button, then create a list by clicking
+ "Create a new ist" then give it your preferable name to it and description, the symbols into the name should contain a minimum 4 character and into the description minimum 8 character
+then click "Save" to save your list, and then you can add preferable image into the created list by clicking in your newest list. You can create multiple favorite lists and add them to multiple images.
+To see your favorite list you should click in the Favorite navigation, and see your created favorite list, you can download the image into the favorite page by clicking the image.
