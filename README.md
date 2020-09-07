@@ -1,5 +1,13 @@
-# ImagesSearchApp
+# Images Search App
 
+Images Search App is an application which allows users to search and filter some Images by one field and to add/delete them into the favorite lists, and create a new favorite list.
+
+# Author
+Bagrat Zakaryan
+Software Engineer
+bagratzakaryan@gmail.com
+
+# Angular
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server
