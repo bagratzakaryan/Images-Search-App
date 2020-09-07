@@ -37,10 +37,21 @@ Copy these commands to your terminal or cmd to install and start the application
 
 `npm start`
 
-## Usage
+# The Application use
+1. Unsplash API
 
-# Filter images and see Author
-# Create and Add images into favorite list
+2. Rx/JS
+
+3. ngrx/store
+
+4. ngrx/effects
+
+5. localStorage
+
+# Usage
+
+## Filter images and see Author
+## Create and Add images into favorite list
 
 Go to the gallery page by clicking in the navbar to Gallery, then search(filter) your favorite images, hover your liked image and click to Save button, then create a list by clicking
  "Create a new ist" then give it your preferable name to it and description, the symbols into the name should contain a minimum 4 character and into the description minimum 8 character
